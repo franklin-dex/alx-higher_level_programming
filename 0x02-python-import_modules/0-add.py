@@ -6,4 +6,4 @@ if __name__ == "__main__":
     b = 2
 
     solution = add(a, b)
-    print(f'[a] + [b] = [solution]')
+    print(f"[a] + [b] = [solution]")
