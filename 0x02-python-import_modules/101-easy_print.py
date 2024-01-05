@@ -1,0 +1,2 @@
+#pythoniscool
+exit()
