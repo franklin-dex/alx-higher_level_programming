@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    sum_a, sum_b = 0, 0
+    min_length = min(len(tuple_a), len(tuple_b))
+    tuple_a += (0,) * (2 - len(tuple_a))
+    tuple_b += (0,) * (2 - len(tuple_b))
 
-    for i in range(min(len(tuple_a), len(tuple_b))):
-        sum_a += tuple_a[i] if i < len(tuple_a) else 0
-        sum_b += tuple_b[i] if i < len(tuple_b) else 0
-
-    return (sum_a, sum_b)
+    return tuple(a + b for a, b in zip(tuple_a[:2], tuple_b[:2]))
