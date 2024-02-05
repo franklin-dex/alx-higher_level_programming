@@ -1,11 +1,6 @@
 #!/usr/bin/python3
+""" A func that returns a list of attributes and methods of the given object"""
 
 def lookup(obj):
-    """
-    Return a list of attributes and methods of a given object
-    Args:
-        obj: Any python object.
-    Returns:
-        List[str]: A list containing the names of attributes and methods.
-        """
+    """ Returns a list object """
     return dir(obj)
