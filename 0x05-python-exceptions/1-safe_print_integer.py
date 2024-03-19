@@ -1,16 +1,23 @@
 #!/usr/bin/python3
-
 def safe_print_integer(value):
     try:
         print("{:d}".format(value))
         return True
-    except (ValueError, TypeError):
+    except:
         return False
 
-# Example usage:
-result = safe_print_integer(42)
-print("Print successful:", result)
+if __name__ == "__main__":
+    value = 89
+    has_been_print = safe_print_integer(value)
+    if not has_been_print:
+        print("{} is not an integer".format(value))
 
-result = safe_print_integer("Not an integer")
-print("Print successful:", result)
+    value = -89
+    has_been_print = safe_print_integer(value)
+    if not has_been_print:
+        print("{} is not an integer".format(value))
 
+    value = "School"
+    has_been_print = safe_print_integer(value)
+    if not has_been_print:
+        print("{} is not an integer".format(value))
