@@ -1,1 +1,1 @@
-This the readme for this project
+This is the read me of this project
